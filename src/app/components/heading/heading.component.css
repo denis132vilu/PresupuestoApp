@@ -1,0 +1,22 @@
+.jumbotron {
+    background-color: #2196F3;
+    font-family: 'helvetica neue';
+    background: url('/assets/bg-pattern.png'), #2196F3;
+    background: url('/assets/bg-pattern.png'), -webkit-gradient(linear, right top, left top, from(#78178b), to(#dc3545));
+    background: url('/assets/bg-pattern.png'), linear-gradient(to left, #78178b, #e0182c);
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.jumbotron p {
+    margin: 0 !important;
+}
+
+.jumbotron h1 {
+    margin: 0 !important;
+    padding-top: 0;
+    font-weight: 400;
+    font-size: 52px;
+}

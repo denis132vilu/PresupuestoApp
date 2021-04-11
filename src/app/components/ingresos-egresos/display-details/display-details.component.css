@@ -1,0 +1,77 @@
+.container {
+    margin-right: 15px;
+    margin-left: 15px;
+    /* border-width: 1px;
+    border-color: 1px;
+    border-style: solid; */
+}
+
+.title {
+    text-transform: uppercase;
+}
+
+.ingresos {
+    color: #21a6c0;
+}
+
+.egresos {
+    color: #ee4141;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    color: #666666;
+    font-size: large;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+
+.value {
+    text-align: right;
+}
+
+div.hovered {
+    display: inline !important;
+    cursor: pointer;
+}
+
+div.hovered img {
+    margin-bottom: -3px !important;
+}
+
+div.action {
+    display: none;
+    font-size: large;
+}
+
+
+
+label {
+    font-size: 13px;
+    background-color: #fab7b7;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-right: 4px;
+    padding-left: 4px;
+    border-radius: 3px;
+    color: #e23737;
+    margin-right: 5px;
+}
+
+@media only screen and (max-width: 425px) {
+    label {
+        font-size: 11px;
+    }
+}

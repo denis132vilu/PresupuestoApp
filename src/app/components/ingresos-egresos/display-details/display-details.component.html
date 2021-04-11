@@ -1,0 +1,31 @@
+<div class="container">
+    <p class="title" [ngClass]="{ingresos: esIngreso, egresos: !esIngreso}">
+        {{ title }}
+    </p>
+    <table>
+        <caption style="display: none;">Tabla {{ title }}</caption>
+        <thead>
+            <tr style="display: none;">
+                <th scope="row">Descripción</th>
+                <th scope="row">Valor</th>
+                <th scope="row">Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let detail of detalles | filterDetails:esIngreso; let i = index;" (mouseover)="onHover(i)"
+                (mouseleave)="onLeave()">
+                <td class="description">{{ detail.descripcion }}</td>
+                <td class="value" [ngClass]="{ingresos: esIngreso, egresos: !esIngreso}">
+                    {{ detail.valor | currency:'GTQ':'symbol-narrow':'1.2-2'}}
+                    <label *ngIf="!esIngreso">
+                        {{ detail.valor / presupuesto.ingresos | percent }}
+                    </label>
+                    <div class="action" [ngClass]="{hovered: i === hoveredIndex}" (click)="eliminarDetalle(detail, i)">
+                        <img [src]="image" alt="Ícono de eliminar">
+                    </div>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>

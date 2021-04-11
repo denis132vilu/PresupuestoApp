@@ -1,0 +1,16 @@
+<div class="card" [ngClass]="{ingresos: esIngreso, egresos: !esIngreso}">
+    <div class="principal-info">
+        <div class="title text">
+            {{ text }}
+        </div>
+        <div class="quantity text">
+            {{ quantity | currency:'GTQ':'symbol-narrow':'1.2-2'}}
+        </div>
+    </div>
+    &nbsp;
+    <div class="percentage" [ngClass]="{egresos: !esIngreso}">
+        <span *ngIf="percentage">
+            {{ percentage | percent }}
+        </span>
+    </div>
+</div>

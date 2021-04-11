@@ -1,0 +1,67 @@
+.card {
+    justify-content: center;
+    min-width: 200px;
+    max-width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    padding: 12px 12px;
+    font-size: 13px;
+}
+
+.ingresos {
+    background-color: #21a6c0;
+}
+
+.egresos {
+    background-color: #ee4141;
+}
+
+.card,
+.card .principal-info {
+    display: flex;
+}
+
+.title {
+    color: #5e0b0b;
+    min-width: 230px;
+    text-align: left;
+    transition-duration: 200ms;
+}
+
+.quantity {
+    min-width: 100px;
+    text-align: right;
+}
+
+.percentage {
+    font-size: 14px;
+    min-width: 50px;
+    margin-top: 4px;
+}
+
+
+.percentage.egresos span{
+    background-color: #ec6868;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-right: 4px;
+    padding-left: 4px;
+    border-radius: 3px;
+}
+
+@media only screen and (max-width: 425px) {
+    .card .title {
+        min-width: 150px;
+    }
+
+    .card .quantity {
+        min-width: 80px;
+    }
+
+    .card .percentage {
+        font-size: 11px;
+    }
+}

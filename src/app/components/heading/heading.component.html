@@ -1,0 +1,9 @@
+<div class="jumbotron">
+    <p>Presupuesto Disponible:</p>
+    <h1>{{ (presupuesto.ingresos - presupuesto.egresos) | currency:'GTQ':'symbol-narrow':'1.2-2' }}</h1>
+    <app-info-ingresos-egresos [text]="'Ingresos'" [quantity]="presupuesto.ingresos">
+    </app-info-ingresos-egresos>
+    <app-info-ingresos-egresos [text]="'Egresos'" [quantity]="presupuesto.egresos"
+        [percentage]="presupuesto.egresos / presupuesto.ingresos * 100">
+    </app-info-ingresos-egresos>
+</div>

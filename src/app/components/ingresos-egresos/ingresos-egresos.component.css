@@ -1,0 +1,22 @@
+.details-container {
+    display: flex;
+    flex-direction: row;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.details-container .col {
+    width: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 779px) {
+    .details-container {
+        flex-direction: column;
+    }
+
+    .details-container .col {
+        width: 100%;
+    }
+}
